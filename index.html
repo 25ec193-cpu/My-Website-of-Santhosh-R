@@ -62,6 +62,33 @@ section {
     body {
         font-size: 14px;
     }
+    .menu {
+    display: none;
+}
+
+
+@media (max-width:600px){
+
+    .menu {
+        display: block;
+        margin: auto;
+        background: black;
+        color: yellow;
+        font-size: 20px;
+    }
+
+
+    #links {
+        display: none;
+    }
+
+
+    #links a {
+        display: block;
+        margin: 10px;
+    }
+
+}
 
     section {
         margin: 10px;
@@ -76,9 +103,17 @@ section {
 <body>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+
+<button class="menu" onclick="openMenu()">☰ Menu</button>
+
+<div id="links">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+</div>
+
 </nav>
 <div class="container">
 
@@ -134,6 +169,18 @@ function submitForm() {
 
     document.getElementById("msg").innerHTML =
         "Thank you " + name + "! We received " + email;
+    function openMenu(){
+
+    let links = document.getElementById("links");
+
+    if(links.style.display === "block"){
+        links.style.display = "none";
+    }
+    else{
+        links.style.display = "block";
+    }
+
+}
 
 }</script>
 <footer>
