@@ -161,11 +161,11 @@ function openMenu(){
 
     let links = document.getElementById("links");
 
-    if(links.style.display === "block"){
-        links.style.display = "none";
+    if(window.getComputedStyle(links).display === "none"){
+        links.style.display = "block";
     }
     else{
-        links.style.display = "block";
+        links.style.display = "none";
     }
 
 }</script>
