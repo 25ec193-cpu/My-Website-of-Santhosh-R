@@ -48,25 +48,6 @@ section {
     padding: 20px;
     border-radius: 10px;
 }
-@media (max-width: 600px) {
-
-    nav {
-        display: flex;
-        flex-direction: column;
-    }
-
-    nav a {
-        margin: 10px;
-    }
-
-    body {
-        font-size: 14px;
-    }
-    .menu {
-    display: none;
-}
-
-
 @media (max-width:600px){
 
     .menu {
@@ -77,24 +58,20 @@ section {
         font-size: 20px;
     }
 
-
     #links {
         display: none;
     }
-
 
     #links a {
         display: block;
         margin: 10px;
     }
 
-}
-
     section {
         margin: 10px;
         padding: 15px;
     }
-}
+
 }
 </style>
 
@@ -159,17 +136,25 @@ section {
 function hello(){
     document.getElementById("title").innerHTML = "Hello Santhosh!";
 }
+
+
 function changeColor(){
     document.body.style.background = "black";
 }
-function submitForm() {
+
+
+function submitForm(){
 
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
 
     document.getElementById("msg").innerHTML =
-        "Thank you " + name + "! We received " + email;
-    function openMenu(){
+    "Thank you " + name + "! We received " + email;
+
+}
+
+
+function openMenu(){
 
     let links = document.getElementById("links");
 
@@ -180,9 +165,7 @@ function submitForm() {
         links.style.display = "block";
     }
 
-}
-
-}</script>
+}}</script>
 <footer>
     <p>© 2026 My Website</p>
 </footer>
