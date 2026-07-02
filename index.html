@@ -135,7 +135,7 @@ section {
 <a href="#contact">Contact</a>
 
 </div>
-
+<button onclick="changeTheme()">🌙 Theme</button>
 </nav>
 <div class="container">
 
@@ -209,6 +209,11 @@ function openMenu(){
     else{
         links.style.display = "none";
     }
+
+}
+function changeTheme(){
+
+    document.body.classList.toggle("dark");
 
 }</script>
 <footer>
