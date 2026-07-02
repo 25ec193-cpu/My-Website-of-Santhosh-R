@@ -75,7 +75,14 @@ section {
 
     animation: slide 1s;
 }
+#music {
 
+    background: white;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+
+}
 
 @keyframes slide {
 
@@ -174,12 +181,19 @@ section {
 
 <p>I am learning web development.</p>
 <button onclick="changeColor()">Background color Button </button>
+<section id="music">
+
 <h2>🎵 My Music</h2>
 
-<audio controls>
+<audio id="player">
     <source src="music.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
 </audio>
+
+<button onclick="playMusic()">▶️ Play</button>
+
+<button onclick="pauseMusic()">⏸ Pause</button>
+
+</section>
 </section>
 
 
@@ -232,6 +246,22 @@ function openMenu(){
     else{
         links.style.display = "none";
     }
+
+}
+    function playMusic(){
+
+    let music = document.getElementById("player");
+
+    music.play();
+
+}
+
+
+function pauseMusic(){
+
+    let music = document.getElementById("player");
+
+    music.pause();
 
 }
 function changeTheme(){
